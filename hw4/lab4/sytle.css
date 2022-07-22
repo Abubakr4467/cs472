@@ -1,0 +1,40 @@
+fieldset{
+    background-color: #E1E0FF;
+
+}
+body{
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+legend{
+    border: 1px solid black;
+    background-color: #FFF;
+}
+
+input[type="submit"]{
+    background-color: #B07087;
+}
+
+
+span{
+  
+   
+    color: #BE8A9C;
+}
+    
+/* .middle{
+    margin-left: 150px;
+} */
+.Parent{
+    display: flex;
+
+}
+
+.first{
+    width: 30%;
+}
+.second{
+    width: 70%;
+}
