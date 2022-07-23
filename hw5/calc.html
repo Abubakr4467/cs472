@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<!--
+	CSE 190M, Summer 2012
+	This file is a tip calculator page using JavaScript.
+	-->
+<script>
+function calcTip() {
+
+	var bill = document.getElementById("subtotal").value;
+	var tipp = document.getElementById("tip").value;
+
+	var total = bill * tipp;
+	total = Math.round(total*100)/10000;
+	total = total.toFixed(2);
+
+	document.getElementById("total").innerHTML= total;
+}
+
+</script>
+
+<style>
+html {
+    display: block;
+}
+
+head {
+    display: none;
+}
+body, input, button {
+    font-family: "Century Gothic",sans-serif;
+    font-size: 20pt;
+}
+
+body{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: .67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+
+
+
+input[type="text" i] {
+    padding: 1px 2px;
+}
+
+
+div {
+    padding: 10px 10px 0 0 ;
+}
+
+</style>
+	<head>
+		<title>Tip Calculator</title>
+		<link href="tip.css" type="text/css" rel="stylesheet" />
+		<script src="tip.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="style.css">
+	</head>
+
+
+	<body>
+		<h1>
+			<img id="logo" src="https://mumstudents.org/cs472/2022-08-BL/labs/tip_calculator/calc.jpg" alt="++--**//" />
+			  Tip Calculator
+		</h1>
+
+		<div>
+			<label><input id="subtotal" type="text" placeholder="Bill Amount"/> $ Subtotal</label>
+
+
+		</div>
+
+		<div>
+			<label><input id="tip" type="text" placeholder="Tip" /> % Tip</label>
+		</div>
+
+		<div>
+			<button id="btn"  onclick="calcTip();">Calculate Tip</button>
+		</div>
+
+		<hr />
+
+		<div>
+			<h2>Your total:</h2>
+			<p id="total">$0.00</p>
+		</div>
+	</body>
+</html>
