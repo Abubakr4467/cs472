@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+</head>
+<body>
+    <h1>1. In jQuery terminology, what is the difference between the 
+        “jQuery function” and the “jQuery object”?</h1><br>
+    
+    <h2>Answer</h2>
+    <h2>jQuery object is object returned by jQuery function. It stores all document elements <br>
+        but we refer '$' sign or 'jQuery()' as jQuery function. In order to create jQuery objects and events which
+        going to be registered to DOM.
+    </h2>
+
+
+<br><br>
+    <h1>2. Write jQuery code to find all h1 elements that are
+        children of a div element and make their background
+        color red.</h1>
+        <h2>Answer</h2>
+        <pre>
+
+      
+        <code> $(document).ready(function(){ 
+            $("div h1").css("background-color", "red");
+        });
+</code>
+</pre>
+    <h1>abc</h1>
+    <div>
+        <h1>div-1</h1>
+        <h1>div-2</h1>
+     </div>
+     <h1>xyz</h1>
+
+     <br><br>
+     <h1>3. Use a jQuery method to insert the text "YES!" at
+        the end of the &lt;p&gt; element.</h1>
+    <h2>Answer</h2>
+    <p> Professoooor </p>
+
+    <pre>
+        <code>
+
+            $(document).ready(function() {
+                $("p").append("YES!");
+            });
+    
+        </code>
+    </pre>
+
+     <script>
+
+        $(document).ready(function(){
+            $("div h1").css("background-color", "red");
+        });
+
+        $(document).ready(function() {
+                $("p").append("YES!");
+            });
+      
+     </script>
+
+</body>
+</html>
