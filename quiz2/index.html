@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 2 </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <h1>1. Which, if any, of the following 3 code fragments are equivalent? <br> 
+         Explain why they are different, if they are.<br>
+          Explain why they can have different parameters and be equivalent, if they are equivalent.
+    </h1> 
+    <h2>
+        <code>
+                //code fragment 1   <br>
+                $("li").each(function(idx, e) {<br>
+                $(e).css(“color”, “yellow”); });<br>
+                //code fragment 2<br>
+                $("li").each(function() {<br>
+                $(this).css(“color”, “yellow”); });<br>
+                //code fragment 3<br>
+                $("li").each(function(idx) {<br>
+                $(this).css(“color”, “yellow”); });<br>
+        </code>
+    </h2>   
+
+    <h1>Answer</h1>
+    <h2>Basicly all codes output are same , but written differently, <br>
+    function  without parametr , function  with one parametr and function with two parametrs. <br>
+     first parametr index , second parametr for element
+    <h1>
+        2. Write a jQuery expression to find all divs on a page that include <br> 
+        an unordered list in them, and make their text color be blue.
+    </h1>
+    <h2>
+        <pre>
+            < div >no ul here < /div>
+            < div>
+                This does contain a ul.
+                < ul>
+                    < li>the first item< /li>
+                  < li>the second item</ li>
+                < /ul>
+            < /div>
+        </pre>
+    </h2> 
+    <h1>Answer</h1>
+    <h2>
+        <code>
+            <pre>
+    $(document).ready(function(){ <br>
+        $("div ul").css("color","blue"); <br>
+    });
+            </pre>
+            
+        </code>
+    </h2>
+
+    <div>
+        This does contain a ul.
+       <ul>
+           <li>the first item</li>
+       <li>the second item
+       </ul>
+   </div>
+
+    <h1>3. Write jQuery code to append the following div element <br>
+         (and all of its contents) dynamically to the body element.
+    </h1>
+
+    <h2>
+        <pre>
+            < div>< h1>JQuery Core< /h1>< /div>
+            HTML:
+             < !DOCTYPE html>
+             < html>
+                < head>
+                     < meta charset="utf-8">
+                     < title>JS Bin< /title>
+                < /head>
+                < body>
+            
+                < /body>
+             < /html> 
+        </pre>
+    </h2> 
+    <h1>Answer</h1>
+    <h2>
+        <code>
+            $("body").append("< div>< h1>JQuery Core< /h1>< /div>");
+
+        </code>
+    </h2>
+  
+
+    <!-- <ul>
+        <li>dsf</li>
+        <li>sdf</li>
+        <li>434 </li>
+        <li>sdfsf</li>
+    </ul> -->
+
+    
+    
+    <script src="index.js">
+
+// $("li").each(function (idx,e ){
+//     $(e).css("color", "yellow");
+// });
+
+// $("li").each(function(){
+//     $(this).css("color", "green");
+// });
+
+
+// $("li").each(function(idx){
+//     $(this).css("color", "red");
+// });
+
+
+$(document).ready(function(){
+    $("div ul").css("color","blue");
+});
+
+
+$(document).ready(function(){
+    $("body").append("<div><h1>JQuery Core</h1></div>");
+
+});
+
+    </script>
+</body>
+</html>
