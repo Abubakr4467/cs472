@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz 3</title>
+  </head>
+  <body>
+
+    <h1>
+      1. Find the text in the first paragraph (stripping out the html), <br />
+      then set the html of the last paragraph to <br />
+      show it is just text (the red bold is gone).
+    </h1>
+    <p><span>Test</span> Paragraph.</p>
+    <p></p>
+    <h1>Answer </h1>
+
+    <code>
+        <pre>
+            $("document").ready(function(){
+                $("document").ready(function(){
+                    $s = $('p').first().detach();
+                    $('p').last().append($s.text());
+                });
+            });
+        </pre>
+    </code>
+
+    <style>
+        p {
+          color: blue;
+          margin: 8px;
+        }
+        span {
+          color: red;
+        }
+      </style>
+       
+           
+    
+        
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    
+
+
+
+
+    <h1>2. Write jQuery code to create a red background <br>
+        for the level-2 list items</h1>
+
+        <ul class="level-1">
+            <li class="item-i">I</li>
+            <li class="item-ii">II
+            <ul class="level-2">
+               <li class="item-a">A</li>
+               <li class="item-b">B
+            <ul class="level-3">
+               <li class="item-1">1</li>
+               <li class="item-2">2</li>
+               <li class="item-3">3</li>
+            </ul>
+                </li>
+             <li class="item-c">C</li>
+            </ul>
+            </li>
+            <li class="item-iii">III</li>
+        </ul>
+
+    <h1>Answer</h1>
+        <code>
+            <pre>
+                $("document").ready(function(){
+                    $("ul").children().first().next().children().css("background-color", "red");
+                });
+            </pre>
+        </code>
+
+
+
+        <h1>  3. Write jQuery code to select the element that comes immediately before <br>
+            item three and change its background color to blue.
+            </h1>
+
+      
+<ul>
+    <li>list item 1</li>
+    <li>list item 2</li>
+    <li class="third-item">list item 3</li>
+    <li>list item 4</li>
+    <li>list item 5</li>
+</ul>
+
+<h1>Answer</h1>
+<code>
+    <pre>
+        $("document").ready(function(){
+            $(".third-item").first().prev().css("background-color", "blue");
+        });
+    </pre>
+</code>
+
+    <script>
+    //   <!—INSERT YOUR JQUERY CODE HERE - - >
+
+    $("document").ready(function(){
+        $("document").ready(function(){
+            $s = $('p').first().detach();
+            $('p').last().append($s.text());
+        });
+    });
+
+    $("document").ready(function(){
+        $("ul").children().first().next().children().css("background-color", "red");
+    });
+
+    $("document").ready(function(){
+        $(".third-item").first().prev().css("background-color", "blue");
+    });
+    </script>
+
+
+   
+    </html>
+  </body>
+</html>
